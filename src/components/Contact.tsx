@@ -20,7 +20,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-[#F4F9F7] relative overflow-hidden">
+    <section id="contact" className="py-20 bg-gradient-to-br from-blue-50 to-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-20 w-64 h-64 bg-blue-500 rounded-full blur-3xl"></div>
@@ -30,17 +30,17 @@ const Contact = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <div className="inline-block mb-6">
-            <span className="bg-gradient-to-r from-[#FA6F42] to-[#F8753D] text-white px-6 py-3 rounded-full text-sm font-semibold shadow-lg">
+            <span className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-3 rounded-full text-sm font-semibold shadow-lg">
               Get In Touch
             </span>
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold text-[#000000] mb-6 leading-tight">
+          <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
             Contact Us
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-orange-500 block">
               Today
             </span>
           </h2>
-          <p className="text-xl text-[#4A4A4A] max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Ready to take the next step in your healthcare journey? Get in touch with us to schedule an appointment or learn more about our services.
           </p>
         </div>
@@ -48,46 +48,46 @@ const Contact = () => {
         <div className="grid lg:grid-cols-3 gap-12 mb-16">
           {/* Contact Info Cards */}
           <div className="lg:col-span-1 space-y-6">
-            <div className="bg-[#FAFAFA] rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100 group hover:-translate-y-2">
+            <div className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100 group hover:-translate-y-2">
               <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                 <Phone className="text-white" size={28} />
               </div>
-              <h3 className="text-2xl font-bold text-[#000000] mb-4 group-hover:text-blue-600 transition-colors">Phone</h3>
-              <p className="text-[#4A4A4A] mb-4 leading-relaxed">Call us for appointments or emergencies</p>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">Phone</h3>
+              <p className="text-gray-600 mb-4 leading-relaxed">Call us for appointments or emergencies</p>
               <div className="space-y-2">
                 <div className="font-bold text-blue-600 text-lg">+1 (555) 123-4567</div>
                 <div className="text-sm text-gray-500">Emergency: +1 (555) 911-HELP</div>
               </div>
             </div>
 
-            <div className="bg-[#FAFAFA] rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100 group hover:-translate-y-2">
+            <div className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100 group hover:-translate-y-2">
               <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                 <Mail className="text-white" size={28} />
               </div>
-              <h3 className="text-2xl font-bold text-[#000000] mb-4 group-hover:text-green-600 transition-colors">Email</h3>
-              <p className="text-[#4A4A4A] mb-4 leading-relaxed">Send us your questions or concerns</p>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-green-600 transition-colors">Email</h3>
+              <p className="text-gray-600 mb-4 leading-relaxed">Send us your questions or concerns</p>
               <div className="space-y-2">
                 <div className="font-bold text-green-600 text-lg">info@bigmedix.com</div>
                 <div className="text-sm text-gray-500">appointments@bigmedix.com</div>
               </div>
             </div>
 
-            <div className="bg-[#FAFAFA] rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100 group hover:-translate-y-2">
+            <div className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100 group hover:-translate-y-2">
               <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                 <MapPin className="text-white" size={28} />
               </div>
-              <h3 className="text-2xl font-bold text-[#000000] mb-4 group-hover:text-orange-600 transition-colors">Location</h3>
-              <p className="text-[#4A4A4A] mb-4 leading-relaxed">Visit us at our main medical center</p>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-orange-600 transition-colors">Location</h3>
+              <p className="text-gray-600 mb-4 leading-relaxed">Visit us at our main medical center</p>
               <div className="font-bold text-orange-600 text-lg">123 Medical Plaza, Health City, HC 12345</div>
             </div>
           </div>
 
           {/* Contact Form */}
           <div className="lg:col-span-2">
-            <div className="bg-[#FAFAFA] rounded-3xl p-8 shadow-xl border border-gray-100">
+            <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
               <div className="flex items-center mb-8">
                 <Calendar className="text-blue-600 mr-4" size={32} />
-                <h3 className="text-3xl font-bold text-[#000000]">Book an Appointment</h3>
+                <h3 className="text-3xl font-bold text-gray-900">Book an Appointment</h3>
               </div>
               
               <form className="space-y-6">
@@ -186,7 +186,7 @@ const Contact = () => {
 
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-[#FA6F42] to-[#F8753D] text-white py-4 rounded-2xl hover:opacity-90 transition-all duration-300 font-bold flex items-center justify-center space-x-3 shadow-xl hover:shadow-2xl transform hover:scale-105 hover:-translate-y-1"
+                  className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white py-4 rounded-2xl hover:from-blue-700 hover:to-blue-800 transition-all duration-300 font-bold flex items-center justify-center space-x-3 shadow-xl hover:shadow-2xl transform hover:scale-105 hover:-translate-y-1"
                 >
                   <Send size={24} />
                   <span>Book Appointment</span>
@@ -198,7 +198,7 @@ const Contact = () => {
 
         {/* Hours and Additional Info */}
         <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-gradient-to-br from-[#0F4537] to-[#2E6656] rounded-3xl p-8 text-white shadow-xl">
+          <div className="bg-gradient-to-br from-blue-600 to-blue-700 rounded-3xl p-8 text-white shadow-xl">
             <div className="flex items-center mb-6">
               <Clock className="mr-4" size={32} />
               <h3 className="text-2xl font-bold">Working Hours</h3>

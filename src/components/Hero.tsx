@@ -10,7 +10,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="home" className="relative min-h-screen bg-gradient-to-br from-[#0F4537] to-[#2E6656] overflow-hidden">
+    <section id="home" className="relative min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-20 w-32 h-32 bg-white rounded-full animate-float"></div>
@@ -23,14 +23,14 @@ const Hero = () => {
           <div className={`space-y-8 transform transition-all duration-1000 ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-20 opacity-0'}`}>
             <div className="space-y-6">
               <div className="inline-block">
-                <span className="bg-gradient-to-r from-[#FA6F42] to-[#F8753D] text-white px-6 py-2 rounded-full text-sm font-semibold animate-pulse">
+                <span className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-2 rounded-full text-sm font-semibold animate-pulse">
                   #1 Medical Center in the City
                 </span>
               </div>
               
               <h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight">
                 Your Health is Our
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FA6F42] to-[#F8753D] block animate-gradient">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400 block animate-gradient">
                   Top Priority
                 </span>
               </h1>
@@ -41,12 +41,12 @@ const Hero = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-6">
-              <button className="group bg-gradient-to-r from-[#FA6F42] to-[#F8753D] text-white px-8 py-4 rounded-full hover:opacity-90 transition-all duration-300 font-semibold flex items-center justify-center space-x-3 shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105 hover:-translate-y-1">
+              <button className="group bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-4 rounded-full hover:from-orange-600 hover:to-red-600 transition-all duration-300 font-semibold flex items-center justify-center space-x-3 shadow-2xl hover:shadow-orange-500/25 transform hover:scale-105 hover:-translate-y-1">
                 <span>Book Appointment</span>
                 <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform"  />
               </button>
               
-              <button className="group flex items-center space-x-3 text-white hover:text-[#F8753D] transition-all duration-300 font-semibold">
+              <button className="group flex items-center space-x-3 text-white hover:text-orange-300 transition-all duration-300 font-semibold">
                 <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-white/30 transition-all duration-300 group-hover:scale-110">
                   <Play size={20} className="ml-1"  />
                 </div>
@@ -57,33 +57,33 @@ const Hero = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8">
               <div className="text-center group cursor-pointer">
                 <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-white/20 transition-all duration-300 group-hover:scale-110">
-                  <Shield className="text-[#F8753D]" size={32}  />
+                  <Shield className="text-orange-400" size={32}  />
                 </div>
-                <div className="text-3xl font-bold text-white group-hover:text-[#F8753D] transition-colors">24/7</div>
+                <div className="text-3xl font-bold text-white group-hover:text-orange-300 transition-colors">24/7</div>
                 <div className="text-blue-200 text-sm">Emergency Care</div>
               </div>
               
               <div className="text-center group cursor-pointer">
                 <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-white/20 transition-all duration-300 group-hover:scale-110">
-                  <Award className="text-[#F8753D]" size={32}  />
+                  <Award className="text-orange-400" size={32}  />
                 </div>
-                <div className="text-3xl font-bold text-white group-hover:text-[#F8753D] transition-colors">25+</div>
+                <div className="text-3xl font-bold text-white group-hover:text-orange-300 transition-colors">25+</div>
                 <div className="text-blue-200 text-sm">Years Experience</div>
               </div>
               
               <div className="text-center group cursor-pointer">
                 <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-white/20 transition-all duration-300 group-hover:scale-110">
-                  <Users className="text-[#F8753D]" size={32}  />
+                  <Users className="text-orange-400" size={32}  />
                 </div>
-                <div className="text-3xl font-bold text-white group-hover:text-[#F8753D] transition-colors">50+</div>
+                <div className="text-3xl font-bold text-white group-hover:text-orange-300 transition-colors">50+</div>
                 <div className="text-blue-200 text-sm">Expert Doctors</div>
               </div>
               
               <div className="text-center group cursor-pointer">
                 <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-white/20 transition-all duration-300 group-hover:scale-110">
-                  <Clock className="text-[#F8753D]" size={32}  />
+                  <Clock className="text-orange-400" size={32}  />
                 </div>
-                <div className="text-3xl font-bold text-white group-hover:text-[#F8753D] transition-colors">15K+</div>
+                <div className="text-3xl font-bold text-white group-hover:text-orange-300 transition-colors">15K+</div>
                 <div className="text-blue-200 text-sm">Happy Patients</div>
               </div>
             </div>
@@ -108,7 +108,7 @@ const Hero = () => {
                   </div>
                   <div>
                     <div className="font-bold text-gray-800">24/7 Available</div>
-                    <div className="text-sm text-[#4A4A4A]">Emergency Services</div>
+                    <div className="text-sm text-gray-600">Emergency Services</div>
                   </div>
                 </div>
               </div>
@@ -120,14 +120,14 @@ const Hero = () => {
                   </div>
                   <div>
                     <div className="font-bold text-gray-800">Award Winning</div>
-                    <div className="text-sm text-[#4A4A4A]">Healthcare Excellence</div>
+                    <div className="text-sm text-gray-600">Healthcare Excellence</div>
                   </div>
                 </div>
               </div>
             </div>
             
             {/* Background Decorations */}
-            <div className="absolute -top-4 -right-4 w-full h-full bg-gradient-to-br from-[#FA6F42] to-[#F8753D] rounded-3xl -z-10 opacity-20"></div>
+            <div className="absolute -top-4 -right-4 w-full h-full bg-gradient-to-br from-orange-400 to-red-500 rounded-3xl -z-10 opacity-20"></div>
             <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full -z-20 animate-pulse"></div>
           </div>
         </div>

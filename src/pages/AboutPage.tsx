@@ -141,9 +141,9 @@ const AboutPage = () => {
   return (
     <div className="pt-32">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-[#0F4537] to-[#2E6656] text-white relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-20 w-64 h-64 bg-[#FAFAFA] rounded-full blur-3xl"></div>
+          <div className="absolute top-20 left-20 w-64 h-64 bg-white rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-20 w-64 h-64 bg-orange-500 rounded-full blur-3xl"></div>
         </div>
         
@@ -151,7 +151,7 @@ const AboutPage = () => {
           <div className="text-center mb-16">
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
               About
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FA6F42] to-[#F8753D] block">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400 block">
                 BigMedix
               </span>
             </h1>
@@ -163,17 +163,17 @@ const AboutPage = () => {
       </section>
 
       {/* Mission & History */}
-      <section className="py-20 bg-[#FAFAFA]">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
               <div>
-                <h2 className="text-4xl font-bold text-[#000000] mb-6">Our Mission</h2>
-                <p className="text-xl text-[#4A4A4A] leading-relaxed mb-6">
+                <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Mission</h2>
+                <p className="text-xl text-gray-600 leading-relaxed mb-6">
                   To provide world-class healthcare services that combine medical excellence with compassionate care, 
                   ensuring every patient receives personalized treatment in a safe, comfortable environment.
                 </p>
-                <p className="text-lg text-[#4A4A4A] leading-relaxed">
+                <p className="text-lg text-gray-600 leading-relaxed">
                   Since 1998, BigMedix has been at the forefront of medical innovation, continuously expanding our 
                   services and expertise to meet the evolving healthcare needs of our community.
                 </p>
@@ -209,20 +209,20 @@ const AboutPage = () => {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#000000] mb-6">Our Core Values</h2>
-            <p className="text-xl text-[#4A4A4A] max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Core Values</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               These fundamental principles guide everything we do and shape our commitment to exceptional healthcare.
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {coreValues.map((value, index) => (
-              <div key={index} className="bg-[#FAFAFA] rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 text-center group hover:-translate-y-2">
+              <div key={index} className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 text-center group hover:-translate-y-2">
                 <div className={`w-20 h-20 bg-gradient-to-br ${value.color} rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <value.icon className="text-white" size={36} />
                 </div>
-                <h3 className="text-2xl font-bold text-[#000000] mb-4">{value.title}</h3>
-                <p className="text-[#4A4A4A] leading-relaxed">{value.description}</p>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">{value.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{value.description}</p>
               </div>
             ))}
           </div>
@@ -230,18 +230,18 @@ const AboutPage = () => {
       </section>
 
       {/* Leadership Team */}
-      <section className="py-20 bg-[#FAFAFA]">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#000000] mb-6">Our Leadership Team</h2>
-            <p className="text-xl text-[#4A4A4A] max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Leadership Team</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Meet the experienced medical professionals who lead BigMedix with expertise, dedication, and vision.
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {teamMembers.map((member, index) => (
-              <div key={index} className="bg-[#FAFAFA] rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:-translate-y-2">
+              <div key={index} className="bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:-translate-y-2">
                 <div className="relative overflow-hidden">
                   <img
                     src={member.image}
@@ -255,12 +255,12 @@ const AboutPage = () => {
                 </div>
                 
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-[#000000] mb-2">{member.name}</h3>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>
                   <div className="text-blue-600 font-medium mb-2">{member.position}</div>
-                  <div className="text-sm text-[#4A4A4A] mb-3">
+                  <div className="text-sm text-gray-600 mb-3">
                     {member.experience} • {member.education}
                   </div>
-                  <p className="text-[#4A4A4A] text-sm leading-relaxed">{member.bio}</p>
+                  <p className="text-gray-600 text-sm leading-relaxed">{member.bio}</p>
                 </div>
               </div>
             ))}
@@ -269,7 +269,7 @@ const AboutPage = () => {
       </section>
 
       {/* Statistics */}
-      <section ref={sectionRef} className="py-20 bg-gradient-to-br from-[#0F4537] to-[#2E6656] text-white">
+      <section ref={sectionRef} className="py-20 bg-gradient-to-br from-blue-600 to-blue-700 text-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
@@ -279,7 +279,7 @@ const AboutPage = () => {
               { icon: MapPin, number: `${counters.locations}`, label: 'Convenient Locations', color: 'text-orange-400' }
             ].map((stat, index) => (
               <div key={index} className="text-center group cursor-pointer">
-                <div className="w-20 h-20 bg-[#FAFAFA]/10 backdrop-blur-sm rounded-3xl flex items-center justify-center mx-auto mb-4 group-hover:bg-[#FAFAFA]/20 transition-all duration-300 group-hover:scale-110">
+                <div className="w-20 h-20 bg-white/10 backdrop-blur-sm rounded-3xl flex items-center justify-center mx-auto mb-4 group-hover:bg-white/20 transition-all duration-300 group-hover:scale-110">
                   <stat.icon className={stat.color} size={36} />
                 </div>
                 <div className="text-4xl font-bold mb-2 group-hover:text-orange-300 transition-colors">
@@ -298,15 +298,15 @@ const AboutPage = () => {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#000000] mb-6">Our Locations</h2>
-            <p className="text-xl text-[#4A4A4A] max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Locations</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Conveniently located throughout the city to serve you better with comprehensive healthcare services.
             </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
             {locations.map((location, index) => (
-              <div key={index} className="bg-[#FAFAFA] rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:-translate-y-2">
+              <div key={index} className="bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:-translate-y-2">
                 <div className="relative overflow-hidden">
                   <img
                     src={location.image}
@@ -317,18 +317,18 @@ const AboutPage = () => {
                 </div>
                 
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-[#000000] mb-3">{location.name}</h3>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{location.name}</h3>
                   <div className="flex items-start space-x-2 mb-3">
                     <MapPin className="text-blue-600 mt-1" size={16} />
-                    <span className="text-[#4A4A4A]">{location.address}</span>
+                    <span className="text-gray-600">{location.address}</span>
                   </div>
                   <div className="flex items-center space-x-2 mb-4">
                     <Clock className="text-green-600" size={16} />
-                    <span className="text-[#4A4A4A]">{location.phone}</span>
+                    <span className="text-gray-600">{location.phone}</span>
                   </div>
                   
                   <div className="space-y-2">
-                    <div className="text-sm font-medium text-[#000000]">Services Available:</div>
+                    <div className="text-sm font-medium text-gray-900">Services Available:</div>
                     <div className="flex flex-wrap gap-2">
                       {location.services.map((service, serviceIndex) => (
                         <span key={serviceIndex} className="bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-xs font-medium">
@@ -345,11 +345,11 @@ const AboutPage = () => {
       </section>
 
       {/* Certifications */}
-      <section className="py-20 bg-[#FAFAFA]">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#000000] mb-6">Certifications & Affiliations</h2>
-            <p className="text-xl text-[#4A4A4A] max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Certifications & Affiliations</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Our commitment to excellence is recognized by leading healthcare organizations and accreditation bodies.
             </p>
           </div>
@@ -367,7 +367,7 @@ const AboutPage = () => {
             ].map((cert, index) => (
               <div key={index} className="bg-gray-50 rounded-2xl p-6 text-center hover:bg-blue-50 transition-colors duration-300 group">
                 <Award className="text-blue-600 mx-auto mb-4 group-hover:text-blue-700 transition-colors" size={32} />
-                <div className="font-medium text-[#000000] group-hover:text-blue-700 transition-colors">{cert}</div>
+                <div className="font-medium text-gray-900 group-hover:text-blue-700 transition-colors">{cert}</div>
               </div>
             ))}
           </div>

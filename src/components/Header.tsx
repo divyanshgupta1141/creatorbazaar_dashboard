@@ -65,7 +65,7 @@ const Header = () => {
               to="/" 
               className={`font-semibold transition-all duration-300 hover:scale-105 ${
                 isActive('/') 
-                  ? (isScrolled ? 'text-blue-600' : 'text-[#F8753D]')
+                  ? (isScrolled ? 'text-blue-600' : 'text-orange-300') 
                   : (isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-blue-200')
               }`}
             >
@@ -75,7 +75,7 @@ const Header = () => {
               to="/about" 
               className={`font-semibold transition-all duration-300 hover:scale-105 ${
                 isActive('/about') 
-                  ? (isScrolled ? 'text-blue-600' : 'text-[#F8753D]')
+                  ? (isScrolled ? 'text-blue-600' : 'text-orange-300') 
                   : (isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-blue-200')
               }`}
             >
@@ -86,7 +86,7 @@ const Header = () => {
               <button 
                 className={`flex items-center space-x-1 font-semibold transition-all duration-300 hover:scale-105 ${
                   isActive('/services') 
-                    ? (isScrolled ? 'text-blue-600' : 'text-[#F8753D]')
+                    ? (isScrolled ? 'text-blue-600' : 'text-orange-300') 
                     : (isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-blue-200')
                 }`}
                 onMouseEnter={() => setIsServicesOpen(true)}
@@ -119,7 +119,7 @@ const Header = () => {
               to="/doctors" 
               className={`font-semibold transition-all duration-300 hover:scale-105 ${
                 isActive('/doctors') 
-                  ? (isScrolled ? 'text-blue-600' : 'text-[#F8753D]')
+                  ? (isScrolled ? 'text-blue-600' : 'text-orange-300') 
                   : (isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-blue-200')
               }`}
             >
@@ -129,7 +129,7 @@ const Header = () => {
               to="/blog" 
               className={`font-semibold transition-all duration-300 hover:scale-105 ${
                 isActive('/blog') 
-                  ? (isScrolled ? 'text-blue-600' : 'text-[#F8753D]')
+                  ? (isScrolled ? 'text-blue-600' : 'text-orange-300') 
                   : (isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-blue-200')
               }`}
             >
@@ -139,7 +139,7 @@ const Header = () => {
               to="/contact" 
               className={`font-semibold transition-all duration-300 hover:scale-105 ${
                 isActive('/contact') 
-                  ? (isScrolled ? 'text-blue-600' : 'text-[#F8753D]')
+                  ? (isScrolled ? 'text-blue-600' : 'text-orange-300') 
                   : (isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-blue-200')
               }`}
             >
@@ -147,7 +147,7 @@ const Header = () => {
             </Link>
             <Link 
               to="/contact"
-              className="bg-gradient-to-r from-[#FA6F42] to-[#F8753D] text-white px-8 py-3 rounded-full hover:opacity-90 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 hover:-translate-y-1"
+              className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-3 rounded-full hover:from-orange-600 hover:to-red-600 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 hover:-translate-y-1"
             >
               Book Appointment
             </Link>
@@ -175,7 +175,7 @@ const Header = () => {
               <Link to="/contact" className="text-gray-700 hover:text-blue-600 transition-colors font-medium py-2 hover:bg-blue-50 px-4 rounded-lg">Contact</Link>
               <Link 
                 to="/contact"
-                className="bg-gradient-to-r from-[#FA6F42] to-[#F8753D] text-white px-6 py-3 rounded-full hover:opacity-90 transition-all duration-300 font-medium w-fit transform hover:scale-105"
+                className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-3 rounded-full hover:from-orange-600 hover:to-red-600 transition-all duration-300 font-medium w-fit transform hover:scale-105"
               >
                 Book Appointment
               </Link>

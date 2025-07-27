@@ -67,19 +67,19 @@ const About = () => {
           <div className={`space-y-8 transform transition-all duration-1000 ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-20 opacity-0'}`}>
             <div className="space-y-6">
               <div className="inline-block">
-                <span className="bg-gradient-to-r from-[#FA6F42] to-[#F8753D] text-white px-6 py-3 rounded-full text-sm font-semibold shadow-lg">
+                <span className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-3 rounded-full text-sm font-semibold shadow-lg">
                   About BigMedix
                 </span>
               </div>
               
-              <h2 className="text-4xl md:text-6xl font-bold text-[#000000] leading-tight">
+              <h2 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
                 Trusted Healthcare
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-orange-500 block">
                   Since 1998
                 </span>
               </h2>
               
-              <p className="text-xl text-[#4A4A4A] leading-relaxed">
+              <p className="text-xl text-gray-600 leading-relaxed">
                 For over two decades, BigMedix has been at the forefront of medical excellence, providing compassionate, comprehensive healthcare services to our community. Our commitment to innovation and patient-centered care has made us a trusted name in healthcare.
               </p>
             </div>
@@ -104,10 +104,10 @@ const About = () => {
                     <CheckCircle className="text-white" size={16}     />
                   </div>
                   <div>
-                    <h4 className="font-bold text-[#000000] mb-2 text-lg group-hover:text-blue-600 transition-colors">
+                    <h4 className="font-bold text-gray-900 mb-2 text-lg group-hover:text-blue-600 transition-colors">
                       {item.title}
                     </h4>
-                    <p className="text-[#4A4A4A] leading-relaxed">
+                    <p className="text-gray-600 leading-relaxed">
                       {item.description}
                     </p>
                   </div>
@@ -116,7 +116,7 @@ const About = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-gradient-to-r from-[#FA6F42] to-[#F8753D] text-white px-8 py-4 rounded-full hover:from-blue-700 hover:to-blue-800 transition-all duration-300 font-semibold shadow-xl hover:shadow-2xl transform hover:scale-105 hover:-translate-y-1">
+              <button className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-full hover:from-blue-700 hover:to-blue-800 transition-all duration-300 font-semibold shadow-xl hover:shadow-2xl transform hover:scale-105 hover:-translate-y-1">
                 Learn More About Us
               </button>
               
@@ -183,10 +183,10 @@ const About = () => {
               <div className={`w-20 h-20 bg-gradient-to-br ${stat.color} rounded-3xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-all duration-300 shadow-lg`}>
                 <stat.icon className="text-white" size={36}     />
               </div>
-              <div className="text-4xl font-bold text-[#000000] mb-2 group-hover:text-blue-600 transition-colors">
+              <div className="text-4xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                 {stat.number}
               </div>
-              <div className="text-[#4A4A4A] font-medium">{stat.label}</div>
+              <div className="text-gray-600 font-medium">{stat.label}</div>
             </div>
           ))}
         </div>

@@ -97,9 +97,9 @@ const BlogPage = () => {
   return (
     <div className="pt-32">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-[#0F4537] to-[#2E6656] text-white relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-20 w-64 h-64 bg-[#FAFAFA] rounded-full blur-3xl"></div>
+          <div className="absolute top-20 left-20 w-64 h-64 bg-white rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-20 w-64 h-64 bg-orange-500 rounded-full blur-3xl"></div>
         </div>
         
@@ -107,7 +107,7 @@ const BlogPage = () => {
           <div className="text-center mb-16">
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
               Health
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FA6F42] to-[#F8753D] block">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400 block">
                 Blog
               </span>
             </h1>
@@ -119,7 +119,7 @@ const BlogPage = () => {
       </section>
 
       {/* Search and Filter */}
-      <section className="py-12 bg-[#FAFAFA] border-b">
+      <section className="py-12 bg-white border-b">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row gap-6 items-center justify-between">
             <div className="relative flex-1 max-w-md">
@@ -141,7 +141,7 @@ const BlogPage = () => {
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                     selectedCategory === category
                       ? 'bg-blue-600 text-white shadow-lg'
-                      : 'bg-gray-100 text-[#4A4A4A] hover:bg-blue-50 hover:text-blue-600'
+                      : 'bg-gray-100 text-gray-600 hover:bg-blue-50 hover:text-blue-600'
                   }`}
                 >
                   {category === 'all' ? 'All Categories' : category}
@@ -157,12 +157,12 @@ const BlogPage = () => {
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="mb-8">
-              <span className="bg-gradient-to-r from-[#FA6F42] to-[#F8753D] text-white px-4 py-2 rounded-full text-sm font-semibold">
+              <span className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                 Featured Article
               </span>
             </div>
             
-            <div className="bg-[#FAFAFA] rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300">
+            <div className="bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300">
               <div className="grid lg:grid-cols-2 gap-0">
                 <div className="relative overflow-hidden">
                   <ImageWithFallback
@@ -194,17 +194,17 @@ const BlogPage = () => {
                     </div>
                   </div>
                   
-                  <h2 className="text-3xl font-bold text-[#000000] mb-4 leading-tight">
+                  <h2 className="text-3xl font-bold text-gray-900 mb-4 leading-tight">
                     {featuredPost.title}
                   </h2>
                   
-                  <p className="text-[#4A4A4A] leading-relaxed mb-6">
+                  <p className="text-gray-600 leading-relaxed mb-6">
                     {featuredPost.excerpt}
                   </p>
                   
                   <Link
                     to={`/blog/${featuredPost.slug}`}
-                    className="inline-flex items-center space-x-2 bg-gradient-to-r from-[#FA6F42] to-[#F8753D] text-white px-6 py-3 rounded-full hover:from-blue-700 hover:to-blue-800 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 w-fit"
+                    className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-3 rounded-full hover:from-blue-700 hover:to-blue-800 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 w-fit"
                   >
                     <span>Read Full Article</span>
                     <ArrowRight size={20} />
@@ -217,11 +217,11 @@ const BlogPage = () => {
       )}
 
       {/* Blog Grid */}
-      <section className="py-20 bg-[#FAFAFA]">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {regularPosts.map((post) => (
-              <article key={post.id} className="bg-[#FAFAFA] rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:-translate-y-2">
+              <article key={post.id} className="bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:-translate-y-2">
                 <div className="relative overflow-hidden">
                   <ImageWithFallback
                     src={post.image}
@@ -248,11 +248,11 @@ const BlogPage = () => {
                     </div>
                   </div>
                   
-                  <h3 className="text-xl font-bold text-[#000000] mb-3 leading-tight group-hover:text-blue-600 transition-colors">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 leading-tight group-hover:text-blue-600 transition-colors">
                     {post.title}
                   </h3>
                   
-                  <p className="text-[#4A4A4A] leading-relaxed mb-4 text-sm">
+                  <p className="text-gray-600 leading-relaxed mb-4 text-sm">
                     {post.excerpt}
                   </p>
                   
@@ -280,15 +280,15 @@ const BlogPage = () => {
               <div className="text-gray-400 mb-4">
                 <Search size={64} className="mx-auto" />
               </div>
-              <h3 className="text-2xl font-bold text-[#000000] mb-2">No articles found</h3>
-              <p className="text-[#4A4A4A]">Try adjusting your search terms or category filter.</p>
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">No articles found</h3>
+              <p className="text-gray-600">Try adjusting your search terms or category filter.</p>
             </div>
           )}
         </div>
       </section>
 
       {/* Newsletter Signup */}
-      <section className="py-20 bg-gradient-to-br from-[#0F4537] to-[#2E6656] text-white">
+      <section className="py-20 bg-gradient-to-br from-blue-600 to-blue-700 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Stay Updated with Health Tips</h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
@@ -299,9 +299,9 @@ const BlogPage = () => {
             <input
               type="email"
               placeholder="Enter your email address"
-              className="flex-1 px-6 py-4 rounded-full text-[#000000] focus:outline-none focus:ring-4 focus:ring-blue-300"
+              className="flex-1 px-6 py-4 rounded-full text-gray-900 focus:outline-none focus:ring-4 focus:ring-blue-300"
             />
-            <button className="bg-gradient-to-r from-[#FA6F42] to-[#F8753D] text-white px-8 py-4 rounded-full hover:opacity-90 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:scale-105">
+            <button className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-4 rounded-full hover:from-orange-600 hover:to-red-600 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:scale-105">
               Subscribe
             </button>
           </div>

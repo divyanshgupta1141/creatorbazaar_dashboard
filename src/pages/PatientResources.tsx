@@ -102,9 +102,9 @@ const PatientResources = () => {
   return (
     <div className="pt-32">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-[#0F4537] to-[#2E6656] text-white relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-20 w-64 h-64 bg-[#FAFAFA] rounded-full blur-3xl"></div>
+          <div className="absolute top-20 left-20 w-64 h-64 bg-white rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-20 w-64 h-64 bg-orange-500 rounded-full blur-3xl"></div>
         </div>
         
@@ -112,7 +112,7 @@ const PatientResources = () => {
           <div className="text-center mb-16">
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
               Patient
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FA6F42] to-[#F8753D] block">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400 block">
                 Resources
               </span>
             </h1>
@@ -124,11 +124,11 @@ const PatientResources = () => {
       </section>
 
       {/* Quick Links */}
-      <section className="py-20 bg-[#FAFAFA]">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#000000] mb-6">Quick Access</h2>
-            <p className="text-xl text-[#4A4A4A] max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Quick Access</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Access the most commonly used patient services and tools with just one click.
             </p>
           </div>
@@ -138,15 +138,15 @@ const PatientResources = () => {
               <a
                 key={index}
                 href={link.link}
-                className="group bg-[#FAFAFA] rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:-translate-y-4"
+                className="group bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:-translate-y-4"
               >
                 <div className={`w-20 h-20 bg-gradient-to-br ${link.color} rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <link.icon className="text-white" size={36} />
                 </div>
-                <h3 className="text-2xl font-bold text-[#000000] mb-4 group-hover:text-blue-600 transition-colors">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
                   {link.title}
                 </h3>
-                <p className="text-[#4A4A4A] leading-relaxed">
+                <p className="text-gray-600 leading-relaxed">
                   {link.description}
                 </p>
               </a>
@@ -159,18 +159,18 @@ const PatientResources = () => {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#000000] mb-6">Downloadable Resources</h2>
-            <p className="text-xl text-[#4A4A4A] max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Downloadable Resources</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Download important forms, educational materials, and preparation guides to help you prepare for your visit.
             </p>
           </div>
 
           <div className="space-y-12">
             {resources.map((category, categoryIndex) => (
-              <div key={categoryIndex} className="bg-[#FAFAFA] rounded-3xl shadow-lg overflow-hidden">
+              <div key={categoryIndex} className="bg-white rounded-3xl shadow-lg overflow-hidden">
                 <div className={`bg-gradient-to-r ${category.color} p-8`}>
                   <div className="flex items-center space-x-4">
-                    <div className="w-16 h-16 bg-[#FAFAFA]/20 rounded-2xl flex items-center justify-center">
+                    <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center">
                       <category.icon className="text-white" size={32} />
                     </div>
                     <div>
@@ -186,7 +186,7 @@ const PatientResources = () => {
                       <div key={itemIndex} className="group bg-gray-50 rounded-2xl p-6 hover:bg-blue-50 transition-all duration-300 cursor-pointer hover:-translate-y-1">
                         <div className="flex items-start justify-between mb-4">
                           <div className="flex-1">
-                            <h4 className="font-bold text-[#000000] mb-2 group-hover:text-blue-600 transition-colors">
+                            <h4 className="font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                               {item.name}
                             </h4>
                             <div className="flex items-center space-x-4 text-sm text-gray-500">
@@ -211,50 +211,50 @@ const PatientResources = () => {
       </section>
 
       {/* Contact Information */}
-      <section className="py-20 bg-[#FAFAFA]">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#000000] mb-6">Contact Information</h2>
-            <p className="text-xl text-[#4A4A4A] max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Contact Information</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Get in touch with the right department for your needs. Our staff is here to help you navigate your healthcare journey.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {contactInfo.map((location, index) => (
-              <div key={index} className="bg-[#FAFAFA] rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 p-8 hover:-translate-y-2">
+              <div key={index} className="bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 p-8 hover:-translate-y-2">
                 <div className="text-center mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <MapPin className="text-white" size={28} />
                   </div>
-                  <h3 className="text-2xl font-bold text-[#000000] mb-2">{location.title}</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{location.title}</h3>
                 </div>
 
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
                     <Phone className="text-green-600" size={20} />
                     <div>
-                      <div className="font-bold text-[#000000]">{location.phone}</div>
+                      <div className="font-bold text-gray-900">{location.phone}</div>
                     </div>
                   </div>
                   
                   <div className="flex items-center space-x-3">
                     <Clock className="text-blue-600" size={20} />
                     <div>
-                      <div className="text-[#4A4A4A]">{location.hours}</div>
+                      <div className="text-gray-600">{location.hours}</div>
                     </div>
                   </div>
                   
                   <div className="flex items-start space-x-3">
                     <MapPin className="text-orange-600 mt-1" size={20} />
                     <div>
-                      <div className="text-[#4A4A4A]">{location.address}</div>
+                      <div className="text-gray-600">{location.address}</div>
                     </div>
                   </div>
                 </div>
 
                 <div className="mt-6 pt-6 border-t border-gray-200">
-                  <div className="text-sm font-medium text-[#000000] mb-3">Services Available:</div>
+                  <div className="text-sm font-medium text-gray-900 mb-3">Services Available:</div>
                   <div className="flex flex-wrap gap-2">
                     {location.services.map((service, serviceIndex) => (
                       <span key={serviceIndex} className="bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-xs font-medium">
@@ -270,10 +270,10 @@ const PatientResources = () => {
       </section>
 
       {/* Privacy & Security */}
-      <section className="py-20 bg-gradient-to-br from-[#0F4537] to-[#2E6656] text-white">
+      <section className="py-20 bg-gradient-to-br from-blue-600 to-blue-700 text-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <div className="w-20 h-20 bg-[#FAFAFA]/20 rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
               <Shield className="text-white" size={36} />
             </div>
             <h2 className="text-4xl font-bold mb-6">Your Privacy & Security</h2>
@@ -298,7 +298,7 @@ const PatientResources = () => {
               }
             ].map((item, index) => (
               <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-[#FAFAFA]/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Shield className="text-white" size={28} />
                 </div>
                 <h3 className="text-xl font-bold mb-3">{item.title}</h3>
@@ -308,7 +308,7 @@ const PatientResources = () => {
           </div>
 
           <div className="text-center mt-12">
-            <button className="bg-[#FAFAFA] text-blue-600 px-8 py-4 rounded-full hover:bg-blue-50 transition-all duration-300 font-bold shadow-xl hover:shadow-2xl transform hover:scale-105">
+            <button className="bg-white text-blue-600 px-8 py-4 rounded-full hover:bg-blue-50 transition-all duration-300 font-bold shadow-xl hover:shadow-2xl transform hover:scale-105">
               View Privacy Policy
             </button>
           </div>

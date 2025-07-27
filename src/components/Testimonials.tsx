@@ -93,7 +93,7 @@ const Testimonials = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <div className="inline-block mb-6">
-            <span className="bg-gradient-to-r from-[#FA6F42] to-[#F8753D] text-white px-6 py-3 rounded-full text-sm font-semibold shadow-lg animate-pulse">
+            <span className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-3 rounded-full text-sm font-semibold shadow-lg animate-pulse">
               Patient Stories
             </span>
           </div>

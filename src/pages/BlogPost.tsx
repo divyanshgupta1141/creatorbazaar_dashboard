@@ -102,7 +102,7 @@ const BlogPost = () => {
       </div>
 
       {/* Article Header */}
-      <section className="py-16 bg-[#FAFAFA]">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="mb-8">
@@ -111,11 +111,11 @@ const BlogPost = () => {
               </span>
             </div>
             
-            <h1 className="text-4xl md:text-5xl font-bold text-[#000000] mb-6 leading-tight">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
               {post.title}
             </h1>
             
-            <div className="flex flex-wrap items-center gap-6 text-[#4A4A4A] mb-8">
+            <div className="flex flex-wrap items-center gap-6 text-gray-600 mb-8">
               <div className="flex items-center space-x-2">
                 <User size={20} />
                 <span className="font-medium">{post.author}</span>
@@ -140,11 +140,11 @@ const BlogPost = () => {
                 <Heart size={18} />
                 <span>Like</span>
               </button>
-              <button className="flex items-center space-x-2 bg-gray-50 text-[#4A4A4A] px-4 py-2 rounded-full hover:bg-gray-100 transition-colors">
+              <button className="flex items-center space-x-2 bg-gray-50 text-gray-600 px-4 py-2 rounded-full hover:bg-gray-100 transition-colors">
                 <Bookmark size={18} />
                 <span>Save</span>
               </button>
-              <button className="flex items-center space-x-2 bg-gray-50 text-[#4A4A4A] px-4 py-2 rounded-full hover:bg-gray-100 transition-colors">
+              <button className="flex items-center space-x-2 bg-gray-50 text-gray-600 px-4 py-2 rounded-full hover:bg-gray-100 transition-colors">
                 <Share2 size={18} />
                 <span>Share</span>
               </button>
@@ -170,11 +170,11 @@ const BlogPost = () => {
       </section>
 
       {/* Article Content */}
-      <section className="py-16 bg-[#FAFAFA]">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div 
-              className="prose prose-lg max-w-none prose-headings:text-[#000000] prose-headings:font-bold prose-p:text-gray-700 prose-p:leading-relaxed prose-li:text-gray-700 prose-strong:text-[#000000] prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline"
+              className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-headings:font-bold prose-p:text-gray-700 prose-p:leading-relaxed prose-li:text-gray-700 prose-strong:text-gray-900 prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline"
               dangerouslySetInnerHTML={{ __html: post.content }}
             />
           </div>
@@ -185,7 +185,7 @@ const BlogPost = () => {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="bg-[#FAFAFA] rounded-3xl p-8 shadow-lg">
+            <div className="bg-white rounded-3xl p-8 shadow-lg">
               <div className="flex items-start space-x-6">
                 <ImageWithFallback
                   src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
@@ -193,9 +193,9 @@ const BlogPost = () => {
                   className="w-24 h-24 rounded-full object-cover"
                 />
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-[#000000] mb-2">{post.author}</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{post.author}</h3>
                   <div className="text-blue-600 font-medium mb-4">Chief Cardiologist at BigMedix</div>
-                  <p className="text-[#4A4A4A] leading-relaxed">
+                  <p className="text-gray-600 leading-relaxed">
                     Dr. Sarah Johnson is a board-certified cardiologist with over 15 years of experience in cardiovascular medicine. 
                     She specializes in preventive cardiology and has published numerous research papers on heart disease prevention. 
                     Dr. Johnson is passionate about patient education and helping individuals achieve optimal heart health through 
@@ -209,10 +209,10 @@ const BlogPost = () => {
       </section>
 
       {/* Related Articles */}
-      <section className="py-16 bg-[#FAFAFA]">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-[#000000] mb-8">Related Articles</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">Related Articles</h2>
             
             <div className="grid md:grid-cols-2 gap-8">
               {[
@@ -232,7 +232,7 @@ const BlogPost = () => {
                 <Link
                   key={index}
                   to={`/blog/${article.slug}`}
-                  className="group bg-[#FAFAFA] rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden hover:-translate-y-2"
+                  className="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden hover:-translate-y-2"
                 >
                   <div className="relative overflow-hidden">
                     <ImageWithFallback
@@ -242,10 +242,10 @@ const BlogPost = () => {
                     />
                   </div>
                   <div className="p-6">
-                    <h3 className="text-xl font-bold text-[#000000] mb-3 group-hover:text-blue-600 transition-colors">
+                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                       {article.title}
                     </h3>
-                    <p className="text-[#4A4A4A] leading-relaxed">
+                    <p className="text-gray-600 leading-relaxed">
                       {article.excerpt}
                     </p>
                   </div>

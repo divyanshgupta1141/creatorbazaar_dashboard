@@ -165,9 +165,9 @@ const Careers = () => {
   return (
     <div className="pt-32">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-[#0F4537] to-[#2E6656] text-white relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-20 w-64 h-64 bg-[#FAFAFA] rounded-full blur-3xl"></div>
+          <div className="absolute top-20 left-20 w-64 h-64 bg-white rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-20 w-64 h-64 bg-orange-500 rounded-full blur-3xl"></div>
         </div>
         
@@ -175,7 +175,7 @@ const Careers = () => {
           <div className="text-center mb-16">
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
               Join Our
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FA6F42] to-[#F8753D] block">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400 block">
                 Healthcare Team
               </span>
             </h1>
@@ -187,23 +187,23 @@ const Careers = () => {
       </section>
 
       {/* Why Work With Us */}
-      <section className="py-20 bg-[#FAFAFA]">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#000000] mb-6">Why Choose BigMedix?</h2>
-            <p className="text-xl text-[#4A4A4A] max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Why Choose BigMedix?</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Join a team that values innovation, collaboration, and making a real difference in patients' lives every day.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
-              <div key={index} className="bg-[#FAFAFA] rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 text-center group hover:-translate-y-2">
+              <div key={index} className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 text-center group hover:-translate-y-2">
                 <div className={`w-20 h-20 bg-gradient-to-br ${benefit.color} rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <benefit.icon className="text-white" size={36} />
                 </div>
-                <h3 className="text-xl font-bold text-[#000000] mb-4">{benefit.title}</h3>
-                <p className="text-[#4A4A4A] leading-relaxed">{benefit.description}</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">{benefit.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{benefit.description}</p>
               </div>
             ))}
           </div>
@@ -258,7 +258,7 @@ const Careers = () => {
             </div>
             
             <div className="text-center">
-              <p className="text-[#4A4A4A]">
+              <p className="text-gray-600">
                 Showing {filteredJobs.length} of {jobOpenings.length} available positions
               </p>
             </div>
@@ -273,12 +273,12 @@ const Careers = () => {
             {filteredJobs.length > 0 ? (
               <div className="space-y-6">
                 {filteredJobs.map((job) => (
-                  <div key={job.id} className="bg-[#FAFAFA] rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:-translate-y-1">
+                  <div key={job.id} className="bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group hover:-translate-y-1">
                     <div className="p-8">
                       <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
                         <div className="flex-1">
                           <div className="flex items-center space-x-3 mb-2">
-                            <h3 className="text-2xl font-bold text-[#000000] group-hover:text-blue-600 transition-colors">
+                            <h3 className="text-2xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
                               {job.title}
                             </h3>
                             <span className={`px-3 py-1 rounded-full text-sm font-medium ${
@@ -290,7 +290,7 @@ const Careers = () => {
                             </span>
                           </div>
                           
-                          <div className="flex flex-wrap items-center gap-4 text-[#4A4A4A] mb-4">
+                          <div className="flex flex-wrap items-center gap-4 text-gray-600 mb-4">
                             <div className="flex items-center space-x-1">
                               <Briefcase size={16} />
                               <span>{job.department}</span>
@@ -311,7 +311,7 @@ const Careers = () => {
                         </div>
                         
                         <div className="flex flex-col sm:flex-row gap-3">
-                          <button className="bg-gradient-to-r from-[#FA6F42] to-[#F8753D] text-white px-6 py-3 rounded-full hover:from-blue-700 hover:to-blue-800 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:scale-105">
+                          <button className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-3 rounded-full hover:from-blue-700 hover:to-blue-800 transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:scale-105">
                             Apply Now
                           </button>
                           <button className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-full hover:bg-blue-50 transition-all duration-300 font-semibold">
@@ -320,16 +320,16 @@ const Careers = () => {
                         </div>
                       </div>
                       
-                      <p className="text-[#4A4A4A] leading-relaxed mb-6">
+                      <p className="text-gray-600 leading-relaxed mb-6">
                         {job.description}
                       </p>
                       
                       <div className="grid md:grid-cols-2 gap-6">
                         <div>
-                          <h4 className="font-bold text-[#000000] mb-3">Requirements:</h4>
+                          <h4 className="font-bold text-gray-900 mb-3">Requirements:</h4>
                           <ul className="space-y-1">
                             {job.requirements.map((req, index) => (
-                              <li key={index} className="flex items-center text-sm text-[#4A4A4A]">
+                              <li key={index} className="flex items-center text-sm text-gray-600">
                                 <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
                                 {req}
                               </li>
@@ -338,7 +338,7 @@ const Careers = () => {
                         </div>
                         
                         <div>
-                          <h4 className="font-bold text-[#000000] mb-3">Benefits:</h4>
+                          <h4 className="font-bold text-gray-900 mb-3">Benefits:</h4>
                           <div className="flex flex-wrap gap-2">
                             {job.benefits.map((benefit, index) => (
                               <span key={index} className="bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-sm font-medium">
@@ -366,8 +366,8 @@ const Careers = () => {
                 <div className="text-gray-400 mb-4">
                   <Briefcase size={64} className="mx-auto" />
                 </div>
-                <h3 className="text-2xl font-bold text-[#000000] mb-2">No positions found</h3>
-                <p className="text-[#4A4A4A] mb-6">Try adjusting your search criteria or check back later for new openings.</p>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">No positions found</h3>
+                <p className="text-gray-600 mb-6">Try adjusting your search criteria or check back later for new openings.</p>
                 <button 
                   onClick={() => {
                     setSearchTerm('');
@@ -385,11 +385,11 @@ const Careers = () => {
       </section>
 
       {/* Employee Testimonials */}
-      <section className="py-20 bg-[#FAFAFA]">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#000000] mb-6">What Our Team Says</h2>
-            <p className="text-xl text-[#4A4A4A] max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">What Our Team Says</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Hear from our employees about their experience working at BigMedix and why they love being part of our healthcare family.
             </p>
           </div>
@@ -422,11 +422,11 @@ const Careers = () => {
                     alt={testimonial.name}
                     className="w-20 h-20 rounded-full object-cover mx-auto mb-4 border-4 border-white shadow-lg"
                   />
-                  <h3 className="text-xl font-bold text-[#000000]">{testimonial.name}</h3>
+                  <h3 className="text-xl font-bold text-gray-900">{testimonial.name}</h3>
                   <div className="text-blue-600 font-medium">{testimonial.position}</div>
                 </div>
                 
-                <blockquote className="text-[#4A4A4A] leading-relaxed italic">
+                <blockquote className="text-gray-600 leading-relaxed italic">
                   "{testimonial.quote}"
                 </blockquote>
               </div>
@@ -439,8 +439,8 @@ const Careers = () => {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#000000] mb-6">Application Process</h2>
-            <p className="text-xl text-[#4A4A4A] max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Application Process</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Our streamlined application process is designed to be simple and efficient while ensuring we find the best candidates for our team.
             </p>
           </div>
@@ -472,8 +472,8 @@ const Careers = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold shadow-lg">
                   {step.step}
                 </div>
-                <h3 className="text-xl font-bold text-[#000000] mb-4">{step.title}</h3>
-                <p className="text-[#4A4A4A] leading-relaxed">{step.description}</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">{step.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{step.description}</p>
               </div>
             ))}
           </div>
@@ -481,7 +481,7 @@ const Careers = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-gradient-to-br from-[#0F4537] to-[#2E6656] text-white">
+      <section className="py-20 bg-gradient-to-br from-blue-600 to-blue-700 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Start Your Career with Us?</h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
@@ -489,10 +489,10 @@ const Careers = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-[#FA6F42] to-[#F8753D] text-white px-8 py-4 rounded-full hover:opacity-90 transition-all duration-300 font-semibold shadow-xl hover:shadow-2xl transform hover:scale-105">
+            <button className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-4 rounded-full hover:from-orange-600 hover:to-red-600 transition-all duration-300 font-semibold shadow-xl hover:shadow-2xl transform hover:scale-105">
               View All Openings
             </button>
-            <button className="bg-[#FAFAFA]/20 backdrop-blur-sm text-white px-8 py-4 rounded-full hover:bg-[#FAFAFA]/30 transition-all duration-300 font-semibold border border-white/30">
+            <button className="bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-full hover:bg-white/30 transition-all duration-300 font-semibold border border-white/30">
               Contact HR Team
             </button>
           </div>

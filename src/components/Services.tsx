@@ -83,7 +83,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-[#F4F9F7] relative overflow-hidden">
+    <section id="services" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-20 w-64 h-64 bg-blue-500 rounded-full blur-3xl"></div>
@@ -93,17 +93,17 @@ const Services = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <div className="inline-block mb-6">
-            <span className="bg-gradient-to-r from-[#FA6F42] to-[#F8753D] text-white px-6 py-3 rounded-full text-sm font-semibold shadow-lg">
+            <span className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-3 rounded-full text-sm font-semibold shadow-lg">
               Our Medical Services
             </span>
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold text-[#000000] mb-6 leading-tight">
+          <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
             Comprehensive Healthcare
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FA6F42] to-[#F8753D] block">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-orange-500 block">
               Solutions
             </span>
           </h2>
-          <p className="text-xl text-[#4A4A4A] max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             We provide world-class medical services across multiple specialties, ensuring you receive the best possible care for all your health needs.
           </p>
         </div>
@@ -114,7 +114,7 @@ const Services = () => {
               key={index}
               data-index={index}
               data-animate="service"
-              className={`group bg-[#FAFAFA] rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 cursor-pointer transform hover:-translate-y-4 ${
+              className={`group bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 cursor-pointer transform hover:-translate-y-4 ${
                 visibleItems.has(index.toString()) 
                   ? 'translate-y-0 opacity-100' 
                   : 'translate-y-8 opacity-0'
@@ -125,11 +125,11 @@ const Services = () => {
                 <service.icon className="text-white" size={36} />
               </div>
               
-              <h3 className="text-2xl font-bold text-[#000000] mb-4 group-hover:text-blue-600 transition-colors">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">
                 {service.title}
               </h3>
               
-              <p className="text-[#4A4A4A] mb-6 leading-relaxed">
+              <p className="text-gray-600 mb-6 leading-relaxed">
                 {service.description}
               </p>
               
@@ -151,7 +151,7 @@ const Services = () => {
         </div>
 
         <div className="text-center mt-16">
-          <button className="bg-gradient-to-r from-[#FA6F42] to-[#F8753D] text-white px-10 py-4 rounded-full hover:opacity-90 transition-all duration-300 font-semibold shadow-xl hover:shadow-2xl transform hover:scale-105 hover:-translate-y-1">
+          <button className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-10 py-4 rounded-full hover:from-blue-700 hover:to-blue-800 transition-all duration-300 font-semibold shadow-xl hover:shadow-2xl transform hover:scale-105 hover:-translate-y-1">
             View All Services
           </button>
         </div>

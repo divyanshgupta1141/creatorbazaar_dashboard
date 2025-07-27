@@ -161,9 +161,9 @@ const TestimonialsPage = () => {
   return (
     <div className="pt-32">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-[#0F4537] to-[#2E6656] text-white relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-20 w-64 h-64 bg-[#FAFAFA] rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute top-20 left-20 w-64 h-64 bg-white rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-20 right-20 w-64 h-64 bg-orange-500 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-purple-500 rounded-full blur-3xl animate-pulse"></div>
         </div>
@@ -172,7 +172,7 @@ const TestimonialsPage = () => {
           <div className="text-center mb-16">
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
               Patient
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FA6F42] to-[#F8753D] block">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400 block">
                 Stories
               </span>
             </h1>
@@ -184,7 +184,7 @@ const TestimonialsPage = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-[#FAFAFA]">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
@@ -192,10 +192,10 @@ const TestimonialsPage = () => {
                 <div className="w-20 h-20 bg-gradient-to-br from-blue-50 to-blue-100 rounded-3xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-all duration-300 shadow-lg">
                   <stat.icon className={stat.color} size={36} />
                 </div>
-                <div className="text-4xl font-bold text-[#000000] mb-2 group-hover:text-blue-600 transition-colors">
+                <div className="text-4xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                   {stat.number}
                 </div>
-                <div className="text-[#4A4A4A] group-hover:text-gray-800 transition-colors">
+                <div className="text-gray-600 group-hover:text-gray-800 transition-colors">
                   {stat.label}
                 </div>
               </div>
@@ -208,8 +208,8 @@ const TestimonialsPage = () => {
       <section className="py-12 bg-gray-50 border-b">
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-[#000000] mb-4">Filter by Specialty</h2>
-            <p className="text-[#4A4A4A]">See what patients are saying about specific departments and treatments.</p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Filter by Specialty</h2>
+            <p className="text-gray-600">See what patients are saying about specific departments and treatments.</p>
           </div>
           
           <div className="flex flex-wrap justify-center gap-3">
@@ -220,7 +220,7 @@ const TestimonialsPage = () => {
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                   selectedCategory === category
                     ? 'bg-blue-600 text-white shadow-lg transform scale-105'
-                    : 'bg-[#FAFAFA] text-[#4A4A4A] hover:bg-blue-50 hover:text-blue-600 shadow-sm'
+                    : 'bg-white text-gray-600 hover:bg-blue-50 hover:text-blue-600 shadow-sm'
                 }`}
               >
                 {category === 'all' ? 'All Departments' : category}
@@ -239,7 +239,7 @@ const TestimonialsPage = () => {
                 key={testimonial.id}
                 data-index={index}
                 data-animate="testimonial"
-                className={`group bg-[#FAFAFA] rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer transform hover:-translate-y-4 ${
+                className={`group bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer transform hover:-translate-y-4 ${
                   visibleItems.has(index.toString()) 
                     ? 'translate-y-0 opacity-100' 
                     : 'translate-y-8 opacity-0'
@@ -269,13 +269,13 @@ const TestimonialsPage = () => {
                       )}
                     </div>
                     <div>
-                      <div className="font-bold text-[#000000] group-hover:text-blue-600 transition-colors">
+                      <div className="font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
                         {testimonial.name}
                       </div>
-                      <div className="text-sm text-[#4A4A4A] group-hover:text-gray-700 transition-colors">
+                      <div className="text-sm text-gray-600 group-hover:text-gray-700 transition-colors">
                         {testimonial.condition}
                       </div>
-                      <div className="text-xs text-gray-500 group-hover:text-[#4A4A4A] transition-colors">
+                      <div className="text-xs text-gray-500 group-hover:text-gray-600 transition-colors">
                         {new Date(testimonial.date).toLocaleDateString()}
                       </div>
                     </div>
@@ -296,7 +296,7 @@ const TestimonialsPage = () => {
                   <span className="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-3 py-1 rounded-full text-xs font-medium">
                     {testimonial.treatment}
                   </span>
-                  <div className="flex items-center space-x-2 text-gray-500 group-hover:text-[#4A4A4A] transition-colors">
+                  <div className="flex items-center space-x-2 text-gray-500 group-hover:text-gray-600 transition-colors">
                     <ThumbsUp size={16} />
                     <span className="text-sm">{testimonial.helpful} helpful</span>
                   </div>
@@ -310,22 +310,22 @@ const TestimonialsPage = () => {
               <div className="text-gray-400 mb-4">
                 <Quote size={64} className="mx-auto" />
               </div>
-              <h3 className="text-2xl font-bold text-[#000000] mb-2">No testimonials found</h3>
-              <p className="text-[#4A4A4A]">Try selecting a different specialty filter.</p>
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">No testimonials found</h3>
+              <p className="text-gray-600">Try selecting a different specialty filter.</p>
             </div>
           )}
         </div>
       </section>
 
       {/* Featured Success Story */}
-      <section className="py-20 bg-[#FAFAFA]">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="bg-[#F4F9F7] rounded-3xl p-8 lg:p-12 shadow-xl">
+          <div className="bg-gradient-to-br from-blue-50 to-white rounded-3xl p-8 lg:p-12 shadow-xl">
             <div className="text-center mb-12">
-              <div className="inline-block bg-gradient-to-r from-[#FA6F42] to-[#F8753D] text-white px-6 py-3 rounded-full text-sm font-semibold mb-6">
+              <div className="inline-block bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-3 rounded-full text-sm font-semibold mb-6">
                 Featured Success Story
               </div>
-              <h2 className="text-4xl font-bold text-[#000000] mb-6">A Life-Changing Experience</h2>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">A Life-Changing Experience</h2>
             </div>
             
             <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -335,14 +335,14 @@ const TestimonialsPage = () => {
                   alt={testimonials[6].name}
                   className="w-full h-96 object-cover rounded-3xl shadow-xl"
                 />
-                <div className="absolute -bottom-6 -right-6 bg-[#FAFAFA] rounded-2xl p-6 shadow-xl">
+                <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl p-6 shadow-xl">
                   <div className="flex items-center space-x-4">
                     <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center">
                       <Heart className="text-white" size={20} />
                     </div>
                     <div>
                       <div className="font-bold text-gray-800">Cancer Survivor</div>
-                      <div className="text-sm text-[#4A4A4A]">2 Years Cancer-Free</div>
+                      <div className="text-sm text-gray-600">2 Years Cancer-Free</div>
                     </div>
                   </div>
                 </div>
@@ -366,14 +366,14 @@ const TestimonialsPage = () => {
                     className="w-16 h-16 rounded-full object-cover border-2 border-blue-200"
                   />
                   <div>
-                    <div className="font-bold text-[#000000] text-lg">{testimonials[6].name}</div>
+                    <div className="font-bold text-gray-900 text-lg">{testimonials[6].name}</div>
                     <div className="text-blue-600 font-medium">{testimonials[6].condition}</div>
-                    <div className="text-sm text-[#4A4A4A]">{testimonials[6].treatment}</div>
+                    <div className="text-sm text-gray-600">{testimonials[6].treatment}</div>
                   </div>
                 </div>
                 
                 <div className="bg-blue-50 rounded-2xl p-6">
-                  <h4 className="font-bold text-[#000000] mb-3">Treatment Highlights:</h4>
+                  <h4 className="font-bold text-gray-900 mb-3">Treatment Highlights:</h4>
                   <ul className="space-y-2 text-gray-700">
                     <li>• Comprehensive cancer care team</li>
                     <li>• Personalized treatment plan</li>
@@ -388,7 +388,7 @@ const TestimonialsPage = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-gradient-to-br from-[#0F4537] to-[#2E6656] text-white">
+      <section className="py-20 bg-gradient-to-br from-blue-600 to-blue-700 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Share Your Experience</h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
@@ -396,10 +396,10 @@ const TestimonialsPage = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-[#FA6F42] to-[#F8753D] text-white px-8 py-4 rounded-full hover:opacity-90 transition-all duration-300 font-semibold shadow-xl hover:shadow-2xl transform hover:scale-105">
+            <button className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-4 rounded-full hover:from-orange-600 hover:to-red-600 transition-all duration-300 font-semibold shadow-xl hover:shadow-2xl transform hover:scale-105">
               Write a Review
             </button>
-            <button className="bg-[#FAFAFA]/20 backdrop-blur-sm text-white px-8 py-4 rounded-full hover:bg-[#FAFAFA]/30 transition-all duration-300 font-semibold border border-white/30">
+            <button className="bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-full hover:bg-white/30 transition-all duration-300 font-semibold border border-white/30">
               Schedule Your Visit
             </button>
           </div>
